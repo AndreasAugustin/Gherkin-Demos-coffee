@@ -1,0 +1,34 @@
+{
+  "name": "coffee",
+  "version": "0.1.0",
+  "description": "Gherkin demo for coffeescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreasAugustin/Gherkin-Demos.git"
+  },
+  "keywords": [
+    "gherkin",
+    "cucumber",
+    "coffeescript",
+    "soundex"
+  ],
+  "author": "andy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndreasAugustin/Gherkin-Demos/issues"
+  },
+  "homepage": "https://github.com/AndreasAugustin/Gherkin-Demos",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-codo": "^1.0.4",
+    "gulp-coffee": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cucumber": "0.0.17",
+    "gulp-markdox": "^0.1.1",
+    "gulp-util": "^3.0.7"
+  }
+}
