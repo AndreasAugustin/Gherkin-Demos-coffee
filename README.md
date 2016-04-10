@@ -17,7 +17,7 @@ Gherkin demo for CoffeeScript
     - gulp-util
 
 # Project setup
-    $ git clone https://github.com/AndreasAugustin/Gherkin-Demos.git
+    $ git clone https://github.com/AndreasAugustin/Gherkin-Demos-coffee.git
     $ cd Gherkin-Demos-coffee
     $ npm install
     
