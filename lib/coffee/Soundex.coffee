@@ -1,4 +1,7 @@
 
+if !module?
+  module = {}
+
 ###*
 # @class Soundex
 #          Implementation of the soundex algorithm to
@@ -27,7 +30,7 @@ class Soundex
   # @return {string} the encoded word
   ###
   encode: (word) =>
-    _zeroPad(_upperFront(_head(word)) + _tail(_encodedDigits(word)))
+    _zeroPad(_removeNotADigit(_upperFront(_head(word)) + _tail(_encodedDigits(word))))
 
   ###
   # @function encodedDigit
@@ -41,6 +44,14 @@ class Soundex
     _encodedDigit(letter)
 
   # --------------- private functions --------------------
+  _removeNotADigit = (word) ->
+    ret = ""
+    for char in word
+      if char isnt _not_a_digit
+        ret += char
+    ret
+
+
   _encodedDigit = (letter) ->
     lowerLetter = _lower(letter)
     if _encodingsMap.hasOwnProperty(lowerLetter) is true
@@ -57,7 +68,7 @@ class Soundex
 
   _encodeHead = (word) =>
     if word.length is 0
-      return _empty_string
+      return _not_a_digit
 
     _encodedDigit(word.charAt(0))
 
@@ -105,7 +116,7 @@ class Soundex
   _zeroPad = (word) ->
     zerosNeeded = _max_code_length - word.length
 
-    for x in [0, zerosNeeded]
+    for x in [1 .. zerosNeeded]
       word += "0"
 
     word

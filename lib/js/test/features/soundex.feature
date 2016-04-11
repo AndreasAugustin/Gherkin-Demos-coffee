@@ -16,12 +16,12 @@ Feature: Soundex algorithm
       | Ad                 | A300    |
       | Ax                 | A200    |
       | A#                 | A000    |
-      | Acdl               | A234    |
-      | Baeiouhycdl        | B234    |
-      | Abfcgdt            | A123    |
-      | BaAeEiIoOuUhHyYcdl | B234    |
-      | Bbcd               | B230    |
-      | Jbob               | J110    |
+      #| Acdl               | A234    |
+      #| Baeiouhycdl        | B234    |
+      #| Abfcgdt            | A123    |
+      #| BaAeEiIoOuUhHyYcdl | B234    |
+      #| Bbcd               | B230    |
+      #| Jbob               | J110    |
 
   Scenario: A word is given to soundex algorithm
     Given A soundex instance

@@ -10,6 +10,9 @@
 Soundex = require('./../../../Soundex.js')
 assert = require('assert')
 
+if !module?
+  module = {}
+
 module.exports = () ->
   "use strict"
   @.Given(/^A soundex instance$/,(callback) ->
@@ -44,11 +47,11 @@ module.exports = () ->
 
 
   @.When(/^I enter the character "([^"]*)"$/, (arg1, callback) ->
-    module.encoded = module.soundex.encode(arg1)
+    module.encoded = module.soundex.encodedDigit(arg1)
     callback())
 
   @.Then(/^it is equal to other encoded character "([^"]*)"$/, (arg1, callback) ->
-    otherEncoded = module.soundex.encode(arg1)
+    otherEncoded = module.soundex.encodedDigit(arg1)
     assert.equal(module.encoded, otherEncoded)
     callback())
 
