@@ -8,8 +8,8 @@ install:
 test_script:
   - node --version
   - npm --version
-  - gulp coffee
-  - gulp coffeeGherkinTest
-  - gulp cucumber
+  - npm run gulp coffee
+  - npm run gulp coffeeGherkinTest
+  - npm run gulp cucumber
 
 build: off
